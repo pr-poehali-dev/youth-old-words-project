@@ -276,60 +276,102 @@ const TIPS_TO_ELDER = [
   },
 ];
 
-const EVENTS = [
-  {
-    date: "21 июня",
-    day: "Суббота",
-    title: "Цифровой чай",
-    desc: "Старшее поколение учится делать видеозвонки, молодёжь учится печь пирожки — в уютном зале библиотеки.",
-    place: "Библиотека № 5, ул. Садовая",
-    icon: "☕",
-    color: "#fde8d0",
-  },
-  {
-    date: "5 июля",
-    day: "Суббота",
-    title: "Прогулка поколений",
-    desc: "Совместная прогулка по парку: молодёжь рассказывает о трендах, старшие — об истории города.",
-    place: "Парк Победы, главный вход",
-    icon: "🌳",
-    color: "#d8ead8",
-  },
-  {
-    date: "19 июля",
-    day: "Пятница",
-    title: "Вечер историй",
-    desc: "Все желающие могут рассказать историю из своей жизни — смешную, трогательную или поучительную.",
-    place: "Культурный центр «Горизонт»",
-    icon: "📖",
-    color: "#e8d8f0",
-  },
-];
-
 const STORIES = [
   {
     name: "Виктор Степанович",
     age: "74 года",
     avatar: "👴",
-    text: "Помню, как в 1975-м мы слушали «The Beatles» с соседом на одних наушниках. Сейчас мой внук открыл для меня целый мир — показал, как искать любую песню за секунды. Времена меняются, но страсть к музыке — нет.",
+    text: "Помню, как в 1975-м мы слушали «The Beatles» с соседом на одних наушниках. Сейчас мой внук показал, как искать любую песню за секунды. Времена меняются, но страсть к музыке — нет.",
     year: "1975 → 2024",
-    color: "#fff3e8",
+    color: "#ede8f8",
   },
   {
     name: "Катя",
     age: "17 лет",
     avatar: "👧",
-    text: "Бабушка научила меня вязать во время карантина. Я думала, что это скучно, но потом залипла на три часа. Сейчас веду тикток о вязании — уже 12 тысяч подписчиков. Оказывается, старое — это новое хипстерское.",
+    text: "Бабушка научила меня вязать во время карантина. Залипла на три часа. Сейчас веду тикток о вязании — уже 12 тысяч подписчиков. Оказывается, старое — это новое хипстерское.",
     year: "Весна 2020",
-    color: "#e8f3e8",
+    color: "#fce8f4",
   },
   {
     name: "Алексей",
     age: "45 лет",
     avatar: "👨",
-    text: "Когда-то папа учил меня забивать гвозди, я считал это устаревшим. Теперь сам учу сына — а он снимает об этом видео для ютуба. Смотрю на их просмотры и думаю: умение из прошлого стало контентом будущего.",
+    text: "Когда-то папа учил меня забивать гвозди, я считал это устаревшим. Теперь сам учу сына — а он снимает об этом видео для ютуба. Умение из прошлого стало контентом будущего.",
     year: "Сквозь годы",
-    color: "#f0e8f8",
+    color: "#e8eef8",
+  },
+  {
+    name: "Зинаида Ивановна",
+    age: "79 лет",
+    avatar: "👵",
+    text: "Внучка попросила показать старые фотографии. Мы просидели над альбомами до полуночи. Она снимала их на телефон и говорила: «Бабуль, это же история!» Впервые за долго я почувствовала, что меня по-настоящему слышат.",
+    year: "Декабрь 2023",
+    color: "#f0eafc",
+  },
+  {
+    name: "Максим",
+    age: "21 год",
+    avatar: "👦",
+    text: "Дед показал мне, как читать звёздное небо без приложений. Я вырос с навигатором в кармане и понятия не имел, что Большая Медведица — это не просто картинка из учебника. Теперь знаю.",
+    year: "Лето 2022",
+    color: "#e8f0fc",
+  },
+  {
+    name: "Галина Фёдоровна",
+    age: "67 лет",
+    avatar: "🧓",
+    text: "Думала, что в 65 уже поздно учиться новому. Внук настроил мне видеозвонки — и теперь каждое утро вижу правнука, хотя живём в разных городах. Слёзы радости — они одинаковые в любом возрасте.",
+    year: "2021 → сейчас",
+    color: "#fce8ec",
+  },
+  {
+    name: "Соня",
+    age: "15 лет",
+    avatar: "🧒",
+    text: "Прабабушка знает наизусть сотни стихов. Я попросила её записать голосовые — теперь слушаю перед сном. Это лучше любого подкаста. Её голос — самое тёплое, что у меня есть в телефоне.",
+    year: "Зима 2023",
+    color: "#ede8f8",
+  },
+  {
+    name: "Пётр Михайлович",
+    age: "71 год",
+    avatar: "👴",
+    text: "Сын объяснил мне, что такое мемы. Я не понял ничего. Но когда он смеялся, объясняя — я смеялся вместе с ним. Не над шуткой. Над тем, как он сиял рядом. Это и было главным.",
+    year: "Будни 2024",
+    color: "#e8f0fc",
+  },
+  {
+    name: "Лиза",
+    age: "23 года",
+    avatar: "👩",
+    text: "Мама не понимала, зачем я веду блог. Потом подписалась и однажды написала в личку: «Ты пишешь лучше меня». Это был лучший комплимент в моей жизни. От мамы.",
+    year: "Осень 2022",
+    color: "#fce8f4",
+  },
+  {
+    name: "Николай Васильевич",
+    age: "68 лет",
+    avatar: "🧔",
+    text: "Внучка показала мне, как делают рилсы. Я снял видео, как строгаю рубанком в гараже. Она смонтировала, поставила музыку. Сейчас у того видео 40 тысяч просмотров. Я до сих пор не верю.",
+    year: "Февраль 2024",
+    color: "#f0eafc",
+  },
+  {
+    name: "Настя",
+    age: "19 лет",
+    avatar: "👩‍🎓",
+    text: "На первом курсе было очень тяжело. Позвонила бабушке в слезах. Она не давала советов — просто слушала и говорила: «Я тебя люблю». Иногда это единственное, что нужно услышать.",
+    year: "Сентябрь 2023",
+    color: "#e8eef8",
+  },
+  {
+    name: "Тамара Алексеевна",
+    age: "72 года",
+    avatar: "👵",
+    text: "Мой сын подарил мне электронную книгу. Сначала я отказывалась — «не нужно это». Теперь читаю каждый вечер и увеличиваю шрифт сколько хочу. Он был прав. Иногда молодые тоже бывают правы.",
+    year: "Рождество 2022",
+    color: "#fce8ec",
   },
 ];
 
@@ -350,21 +392,21 @@ const Bell = () => {
     <div className="relative">
       <button
         onClick={ring}
-        className="relative p-2 rounded-full hover:bg-[#f0e0d0] transition-colors"
+        className="relative p-2 rounded-full hover:bg-[#ede8f8] transition-colors"
         title="Уведомления"
       >
         <span className={ringing ? "bell-shake inline-block" : "inline-block"}>
-          <Icon name="Bell" size={22} style={{ color: "var(--warm-terracotta)" }} />
+          <Icon name="Bell" size={22} style={{ color: "#8b72c8" }} />
         </span>
         {count > 0 && (
-          <span className="absolute top-1 right-1 bg-[#c8714a] text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-golos font-bold">
+          <span className="absolute top-1 right-1 bg-[#8b72c8] text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-golos font-bold">
             {count}
           </span>
         )}
       </button>
       {showPanel && (
-        <div className="absolute right-0 top-12 w-72 bg-white rounded-2xl shadow-xl border border-[#f0e0d0] z-50 animate-fade-in-up p-4">
-          <p className="font-cormorant text-lg font-semibold text-[#2d2318] mb-3">Уведомления</p>
+        <div className="absolute right-0 top-12 w-72 bg-white rounded-2xl shadow-xl border border-[#ddd8f0] z-50 animate-fade-in-up p-4">
+          <p className="font-cormorant text-lg font-semibold text-[#1e1830] mb-3">Уведомления</p>
           {[
             { icon: "💡", text: "Новый совет от Нины Петровны про огород" },
             { icon: "📅", text: "Событие «Цифровой чай» через 3 дня" },
@@ -372,11 +414,11 @@ const Bell = () => {
           ].map((n, i) => (
             <div
               key={i}
-              className="flex gap-3 py-2 border-b border-[#f5ede0] last:border-0 cursor-pointer hover:bg-[#faf3ea] rounded-lg px-2 transition-colors"
+              className="flex gap-3 py-2 border-b border-[#ddd8f0] last:border-0 cursor-pointer hover:bg-[#ede8f8] rounded-lg px-2 transition-colors"
               onClick={() => setCount((c) => Math.max(0, c - 1))}
             >
               <span className="text-xl">{n.icon}</span>
-              <p className="text-sm text-[#8a7060] leading-snug">{n.text}</p>
+              <p className="text-sm text-[#7068a0] leading-snug">{n.text}</p>
             </div>
           ))}
         </div>
@@ -406,14 +448,14 @@ const WordCard = ({ w, i }: { w: (typeof WORDS)[0]; i: number }) => {
       >
         <div
           style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" as const }}
-          className="absolute inset-0 bg-white rounded-2xl border border-[#f0e0d0] p-5 flex flex-col justify-between card-hover shadow-sm"
+          className="absolute inset-0 bg-white rounded-2xl border border-[#ddd8f0] p-5 flex flex-col justify-between card-hover shadow-sm"
         >
           <div>
             <span className="text-3xl">{w.emoji}</span>
-            <p className="font-cormorant text-2xl font-semibold text-[#2d2318] mt-1">{w.youth}</p>
+            <p className="font-cormorant text-2xl font-semibold text-[#1e1830] mt-1">{w.youth}</p>
             <span className="tag-youth text-xs px-2 py-0.5 rounded-full font-golos font-medium">молодёжное</span>
           </div>
-          <p className="text-xs text-[#8a7060] font-golos">Нажми, чтобы перевести →</p>
+          <p className="text-xs text-[#7068a0] font-golos">Нажми, чтобы перевести →</p>
         </div>
         <div
           style={{
@@ -421,13 +463,13 @@ const WordCard = ({ w, i }: { w: (typeof WORDS)[0]; i: number }) => {
             WebkitBackfaceVisibility: "hidden" as const,
             transform: "rotateY(180deg)",
           }}
-          className="absolute inset-0 bg-[#fdf6ee] rounded-2xl border border-[#e8d8c0] p-5 flex flex-col justify-between shadow-sm"
+          className="absolute inset-0 bg-[#ede8f8] rounded-2xl border border-[#c8bce8] p-5 flex flex-col justify-between shadow-sm"
         >
           <div>
             <span className="tag-elder text-xs px-2 py-0.5 rounded-full font-golos font-medium">по-взрослому</span>
-            <p className="font-cormorant text-xl font-semibold text-[#2d2318] mt-2">{w.elder}</p>
+            <p className="font-cormorant text-xl font-semibold text-[#1e1830] mt-2">{w.elder}</p>
           </div>
-          <p className="text-sm text-[#8a7060] font-golos italic">«{w.example}»</p>
+          <p className="text-sm text-[#7068a0] font-golos italic">«{w.example}»</p>
         </div>
       </div>
     </div>
@@ -453,14 +495,14 @@ const ElderWordCard = ({ w, i }: { w: (typeof ELDER_WORDS)[0]; i: number }) => {
       >
         <div
           style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" as const }}
-          className="absolute inset-0 bg-[#f0f5f0] rounded-2xl border border-[#d0e0d0] p-5 flex flex-col justify-between card-hover shadow-sm"
+          className="absolute inset-0 bg-[#e8eef8] rounded-2xl border border-[#b8cce8] p-5 flex flex-col justify-between card-hover shadow-sm"
         >
           <div>
             <span className="text-3xl">{w.emoji}</span>
-            <p className="font-cormorant text-2xl font-semibold text-[#2d2318] mt-1">{w.elder}</p>
+            <p className="font-cormorant text-2xl font-semibold text-[#1e1830] mt-1">{w.elder}</p>
             <span className="tag-elder text-xs px-2 py-0.5 rounded-full font-golos font-medium">из прошлого</span>
           </div>
-          <p className="text-xs text-[#8a7060] font-golos">Нажми, чтобы перевести →</p>
+          <p className="text-xs text-[#7068a0] font-golos">Нажми, чтобы перевести →</p>
         </div>
         <div
           style={{
@@ -468,13 +510,13 @@ const ElderWordCard = ({ w, i }: { w: (typeof ELDER_WORDS)[0]; i: number }) => {
             WebkitBackfaceVisibility: "hidden" as const,
             transform: "rotateY(180deg)",
           }}
-          className="absolute inset-0 bg-[#fde8d0] rounded-2xl border border-[#f0d8b8] p-5 flex flex-col justify-between shadow-sm"
+          className="absolute inset-0 bg-[#fce8f4] rounded-2xl border border-[#e8b8d4] p-5 flex flex-col justify-between shadow-sm"
         >
           <div>
             <span className="tag-youth text-xs px-2 py-0.5 rounded-full font-golos font-medium">по-молодёжному</span>
-            <p className="font-cormorant text-xl font-semibold text-[#2d2318] mt-2">{w.youth}</p>
+            <p className="font-cormorant text-xl font-semibold text-[#1e1830] mt-2">{w.youth}</p>
           </div>
-          <p className="text-sm text-[#8a7060] font-golos italic">«{w.example}»</p>
+          <p className="text-sm text-[#7068a0] font-golos italic">«{w.example}»</p>
         </div>
       </div>
     </div>
@@ -483,7 +525,7 @@ const ElderWordCard = ({ w, i }: { w: (typeof ELDER_WORDS)[0]; i: number }) => {
 
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 
-type Tab = "home" | "dictionary" | "tips" | "events" | "stories";
+type Tab = "home" | "dictionary" | "tips" | "stories";
 
 export default function Index() {
   const [tab, setTab] = useState<Tab>("home");
@@ -511,16 +553,15 @@ export default function Index() {
     { key: "home", label: "Главная", icon: "Home" },
     { key: "dictionary", label: "Словарь", icon: "BookOpen" },
     { key: "tips", label: "Советы", icon: "Lightbulb" },
-    { key: "events", label: "События", icon: "CalendarDays" },
     { key: "stories", label: "Истории", icon: "ScrollText" },
   ];
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "var(--warm-cream)" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "var(--bg-cream)" }}>
       {/* ── Header ── */}
       <header
-        className="sticky top-0 z-40 backdrop-blur-md border-b border-[#eee0ce]"
-        style={{ backgroundColor: "rgba(250, 246, 240, 0.92)" }}
+        className="sticky top-0 z-40 backdrop-blur-md border-b border-[#ddd8f0]"
+        style={{ backgroundColor: "rgba(246, 244, 252, 0.92)" }}
       >
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -534,7 +575,7 @@ export default function Index() {
                 key={n.key}
                 onClick={() => setTab(n.key)}
                 className={`nav-link font-golos text-sm font-medium pb-0.5 ${
-                  tab === n.key ? "active text-[#c8714a]" : "text-[#8a7060]"
+                  tab === n.key ? "active text-[#8b72c8]" : "text-[#7068a0]"
                 }`}
               >
                 {n.label}
@@ -550,17 +591,17 @@ export default function Index() {
               key={n.key}
               onClick={() => setTab(n.key)}
               className={`flex flex-col items-center gap-0.5 px-2 py-1 rounded-xl transition-colors ${
-                tab === n.key ? "bg-[#fde8d0]" : ""
+                tab === n.key ? "bg-[#ede8f8]" : ""
               }`}
             >
               <Icon
                 name={n.icon}
                 size={18}
-                style={{ color: tab === n.key ? "#c8714a" : "#8a7060" }}
+                style={{ color: tab === n.key ? "#8b72c8" : "#7068a0" }}
               />
               <span
                 className={`text-[10px] font-golos font-medium ${
-                  tab === n.key ? "text-[#c8714a]" : "text-[#8a7060]"
+                  tab === n.key ? "text-[#8b72c8]" : "text-[#7068a0]"
                 }`}
               >
                 {n.label}
@@ -582,35 +623,35 @@ export default function Index() {
               className="relative rounded-3xl overflow-hidden mb-10"
               style={{
                 background:
-                  "linear-gradient(135deg, #fde8d0 0%, #f0ede8 50%, #d8ead8 100%)",
+                  "linear-gradient(135deg, #fce8f4 0%, #ede8f8 50%, #d8e8f8 100%)",
               }}
             >
               <div className="texture-bg absolute inset-0" />
               <div className="relative grid md:grid-cols-2 gap-0 items-center">
                 <div className="p-8 md:p-12">
-                  <span className="inline-block bg-white/60 text-[#c8714a] font-golos text-sm font-medium px-3 py-1 rounded-full mb-4 animate-fade-in">
+                  <span className="inline-block bg-white/60 text-[#8b72c8] font-golos text-sm font-medium px-3 py-1 rounded-full mb-4 animate-fade-in">
                     💬 Говорим на одном языке
                   </span>
-                  <h1 className="font-cormorant text-4xl md:text-5xl font-semibold text-[#2d2318] leading-tight mb-4 opacity-0-start animate-fade-in-up delay-100">
+                  <h1 className="font-cormorant text-4xl md:text-5xl font-semibold text-[#1e1830] leading-tight mb-4 opacity-0-start animate-fade-in-up delay-100">
                     Когда слова<br />
                     <em>сближают</em>
                   </h1>
-                  <p className="font-golos text-[#8a7060] text-base leading-relaxed mb-6 opacity-0-start animate-fade-in-up delay-200">
+                  <p className="font-golos text-[#7068a0] text-base leading-relaxed mb-6 opacity-0-start animate-fade-in-up delay-200">
                     Молодёжь и старшее поколение — разные слова, общее сердце. Здесь мы переводим друг друга и учимся вместе.
                   </p>
                   <div className="flex gap-3 flex-wrap opacity-0-start animate-fade-in-up delay-300">
                     <button
                       onClick={() => setTab("dictionary")}
                       className="font-golos font-semibold px-5 py-2.5 rounded-xl text-white transition-all hover:scale-105 hover:shadow-md"
-                      style={{ backgroundColor: "#c8714a" }}
+                      style={{ backgroundColor: "#8b72c8" }}
                     >
                       Открыть словарь
                     </button>
                     <button
-                      onClick={() => setTab("events")}
-                      className="font-golos font-medium px-5 py-2.5 rounded-xl border border-[#d0c0a0] text-[#2d2318] bg-white/60 hover:bg-white transition-all"
+                      onClick={() => setTab("stories")}
+                      className="font-golos font-medium px-5 py-2.5 rounded-xl border border-[#c4b5e8] text-[#1e1830] bg-white/60 hover:bg-white transition-all"
                     >
-                      Ближайшие события
+                      Читать истории
                     </button>
                   </div>
                 </div>
@@ -628,38 +669,38 @@ export default function Index() {
             <div className="grid grid-cols-3 gap-4 mb-10">
               {[
                 { num: "150+", label: "слов в словаре", icon: "📚" },
-                { num: "3", label: "события в июне", icon: "🗓️" },
-                { num: "3", label: "истории", icon: "✨" },
+                { num: "12", label: "историй", icon: "✨" },
+                { num: "12", label: "советов", icon: "💡" },
               ].map((s, i) => (
                 <div
                   key={i}
-                  className="opacity-0-start animate-fade-in-up bg-white rounded-2xl p-4 text-center border border-[#f0e0d0] shadow-sm"
+                  className="opacity-0-start animate-fade-in-up bg-white rounded-2xl p-4 text-center border border-[#ddd8f0] shadow-sm"
                   style={{ animationDelay: `${(i + 1) * 100}ms` }}
                 >
                   <p className="text-2xl mb-1">{s.icon}</p>
-                  <p className="font-cormorant text-3xl font-semibold text-[#c8714a]">{s.num}</p>
-                  <p className="font-golos text-xs text-[#8a7060] mt-0.5">{s.label}</p>
+                  <p className="font-cormorant text-3xl font-semibold text-[#8b72c8]">{s.num}</p>
+                  <p className="font-golos text-xs text-[#7068a0] mt-0.5">{s.label}</p>
                 </div>
               ))}
             </div>
 
             {/* Word of day */}
-            <section className="bg-white rounded-3xl border border-[#f0e0d0] p-6 mb-8 shadow-sm">
+            <section className="bg-white rounded-3xl border border-[#ddd8f0] p-6 mb-8 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-xl">✨</span>
-                <h2 className="font-cormorant text-2xl font-semibold text-[#2d2318]">Слово дня</h2>
+                <h2 className="font-cormorant text-2xl font-semibold text-[#1e1830]">Слово дня</h2>
               </div>
               <div className="flex flex-col md:flex-row md:items-center gap-4">
-                <div className="flex-1 bg-[#fdf3e8] rounded-2xl p-5">
+                <div className="flex-1 bg-[#fce8f4] rounded-2xl p-5">
                   <span className="tag-youth text-xs px-2 py-0.5 rounded-full font-golos font-medium">молодёжное</span>
-                  <p className="font-cormorant text-3xl font-semibold text-[#2d2318] mt-2">Вайб</p>
-                  <p className="font-golos text-sm text-[#8a7060] mt-1">«Здесь классный вайб — хочется остаться!»</p>
+                  <p className="font-cormorant text-3xl font-semibold text-[#1e1830] mt-2">Вайб</p>
+                  <p className="font-golos text-sm text-[#7068a0] mt-1">«Здесь классный вайб — хочется остаться!»</p>
                 </div>
-                <div className="hidden md:flex text-3xl text-[#c8714a] font-cormorant px-4">→</div>
-                <div className="flex-1 bg-[#f0f5f0] rounded-2xl p-5">
+                <div className="hidden md:flex text-3xl text-[#8b72c8] font-cormorant px-4">→</div>
+                <div className="flex-1 bg-[#e8eef8] rounded-2xl p-5">
                   <span className="tag-elder text-xs px-2 py-0.5 rounded-full font-golos font-medium">по-взрослому</span>
-                  <p className="font-cormorant text-3xl font-semibold text-[#2d2318] mt-2">Атмосфера / Настроение</p>
-                  <p className="font-golos text-sm text-[#8a7060] mt-1">Общее чувство и дух места или компании</p>
+                  <p className="font-cormorant text-3xl font-semibold text-[#1e1830] mt-2">Атмосфера / Настроение</p>
+                  <p className="font-golos text-sm text-[#7068a0] mt-1">Общее чувство и дух места или компании</p>
                 </div>
               </div>
             </section>
@@ -667,7 +708,7 @@ export default function Index() {
             {/* Section previews */}
             <div className="grid md:grid-cols-2 gap-5">
               <div
-                className="rounded-3xl overflow-hidden cursor-pointer card-hover shadow-sm border border-[#f0e0d0]"
+                className="rounded-3xl overflow-hidden cursor-pointer card-hover shadow-sm border border-[#ddd8f0]"
                 onClick={() => setTab("tips")}
               >
                 <img
@@ -676,22 +717,22 @@ export default function Index() {
                   className="w-full h-44 object-cover"
                 />
                 <div className="bg-white p-5">
-                  <h3 className="font-cormorant text-xl font-semibold text-[#2d2318]">💡 Советы и опыт</h3>
-                  <p className="font-golos text-sm text-[#8a7060] mt-1">Молодёжь учит технологиям, старшие делятся мудростью</p>
+                  <h3 className="font-cormorant text-xl font-semibold text-[#1e1830]">💡 Советы и опыт</h3>
+                  <p className="font-golos text-sm text-[#7068a0] mt-1">Молодёжь учит технологиям, старшие делятся мудростью</p>
                 </div>
               </div>
               <div
-                className="rounded-3xl overflow-hidden cursor-pointer card-hover shadow-sm border border-[#f0e0d0]"
-                onClick={() => setTab("events")}
+                className="rounded-3xl overflow-hidden cursor-pointer card-hover shadow-sm border border-[#ddd8f0]"
+                onClick={() => setTab("stories")}
               >
                 <img
-                  src="https://cdn.poehali.dev/projects/0045c45d-b857-4d28-85c9-c4417bb90732/files/ac94e4a1-8da0-4e9a-a924-c4fcd16a8acd.jpg"
-                  alt="События"
+                  src="https://cdn.poehali.dev/projects/0045c45d-b857-4d28-85c9-c4417bb90732/files/1ab4e009-e621-4f8f-9d35-8e2b4b395862.jpg"
+                  alt="Истории"
                   className="w-full h-44 object-cover"
                 />
                 <div className="bg-white p-5">
-                  <h3 className="font-cormorant text-xl font-semibold text-[#2d2318]">📅 События и встречи</h3>
-                  <p className="font-golos text-sm text-[#8a7060] mt-1">Офлайн-встречи для живого общения поколений</p>
+                  <h3 className="font-cormorant text-xl font-semibold text-[#1e1830]">📖 Истории и воспоминания</h3>
+                  <p className="font-golos text-sm text-[#7068a0] mt-1">Трогательные истории о том, как поколения нашли общий язык</p>
                 </div>
               </div>
             </div>
@@ -702,8 +743,8 @@ export default function Index() {
         {tab === "dictionary" && (
           <div>
             <div className="mb-6 opacity-0-start animate-fade-in-up">
-              <h2 className="font-cormorant text-4xl font-semibold text-[#2d2318] mb-2">Словарь поколений</h2>
-              <p className="font-golos text-[#8a7060]">Нажми на карточку, чтобы перевернуть и узнать перевод</p>
+              <h2 className="font-cormorant text-4xl font-semibold text-[#1e1830] mb-2">Словарь поколений</h2>
+              <p className="font-golos text-[#7068a0]">Нажми на карточку, чтобы перевернуть и узнать перевод</p>
             </div>
 
             {/* Dict tabs */}
@@ -713,9 +754,9 @@ export default function Index() {
                 className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
                   dictTab === "youth"
                     ? "text-white shadow-sm"
-                    : "bg-white border border-[#e8d8c0] text-[#8a7060] hover:border-[#c8714a]"
+                    : "bg-white border border-[#ddd8f0] text-[#7068a0] hover:border-[#8b72c8]"
                 }`}
-                style={dictTab === "youth" ? { backgroundColor: "#c8714a" } : {}}
+                style={dictTab === "youth" ? { backgroundColor: "#8b72c8" } : {}}
               >
                 <span>🤙</span> Словарь молодёжи
               </button>
@@ -724,9 +765,9 @@ export default function Index() {
                 className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
                   dictTab === "elder"
                     ? "text-white shadow-sm"
-                    : "bg-white border border-[#e8d8c0] text-[#8a7060] hover:border-[#8aab96]"
+                    : "bg-white border border-[#ddd8f0] text-[#7068a0] hover:border-[#7db3d8]"
                 }`}
-                style={dictTab === "elder" ? { backgroundColor: "#8aab96" } : {}}
+                style={dictTab === "elder" ? { backgroundColor: "#7db3d8" } : {}}
               >
                 <span>🌿</span> Словарь старших
               </button>
@@ -735,10 +776,10 @@ export default function Index() {
             {/* Description strip */}
             <div
               className="rounded-2xl px-5 py-3 mb-5 opacity-0-start animate-fade-in-up delay-200 flex items-center gap-3"
-              style={{ backgroundColor: dictTab === "youth" ? "#fde8d0" : "#d8ead8" }}
+              style={{ backgroundColor: dictTab === "youth" ? "#ede8f8" : "#d8e8f8" }}
             >
               <span className="text-xl">{dictTab === "youth" ? "🤙" : "🌿"}</span>
-              <p className="font-golos text-sm" style={{ color: dictTab === "youth" ? "#a04820" : "#2a5c2a" }}>
+              <p className="font-golos text-sm" style={{ color: dictTab === "youth" ? "#6040a0" : "#2060a0" }}>
                 {dictTab === "youth"
                   ? "Слова, которые используют молодые люди — с переводом для старшего поколения"
                   : "Старинные и народные слова — с объяснением для молодёжи"}
@@ -746,12 +787,12 @@ export default function Index() {
             </div>
 
             <div className="relative mb-6 opacity-0-start animate-fade-in-up delay-200">
-              <Icon name="Search" size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8a7060]" />
+              <Icon name="Search" size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#7068a0]" />
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Поиск слова..."
-                className="w-full pl-11 pr-4 py-3 rounded-2xl border border-[#e8d8c0] bg-white font-golos text-[#2d2318] focus:outline-none focus:border-[#c8714a] transition-colors"
+                className="w-full pl-11 pr-4 py-3 rounded-2xl border border-[#ddd8f0] bg-white font-golos text-[#1e1830] focus:outline-none focus:border-[#8b72c8] transition-colors"
               />
             </div>
 
@@ -763,7 +804,7 @@ export default function Index() {
                   ))}
                 </div>
                 {filteredWords.length === 0 && (
-                  <div className="text-center py-16 text-[#8a7060] font-golos">
+                  <div className="text-center py-16 text-[#7068a0] font-golos">
                     <p className="text-4xl mb-3">🔍</p>
                     <p>Слово не найдено</p>
                   </div>
@@ -779,7 +820,7 @@ export default function Index() {
                   ))}
                 </div>
                 {filteredElderWords.length === 0 && (
-                  <div className="text-center py-16 text-[#8a7060] font-golos">
+                  <div className="text-center py-16 text-[#7068a0] font-golos">
                     <p className="text-4xl mb-3">🔍</p>
                     <p>Слово не найдено</p>
                   </div>
@@ -793,18 +834,18 @@ export default function Index() {
         {tab === "tips" && (
           <div>
             <div className="mb-6 opacity-0-start animate-fade-in-up">
-              <h2 className="font-cormorant text-4xl font-semibold text-[#2d2318] mb-2">Советы и опыт</h2>
-              <p className="font-golos text-[#8a7060]">Два поколения — два взгляда на жизнь</p>
+              <h2 className="font-cormorant text-4xl font-semibold text-[#1e1830] mb-2">Советы и опыт</h2>
+              <p className="font-golos text-[#7068a0]">Два поколения — два взгляда на жизнь</p>
             </div>
 
             {/* Tab switcher */}
-            <div className="flex gap-0 mb-6 opacity-0-start animate-fade-in-up delay-100 bg-[#f5ede0] p-1 rounded-2xl w-fit">
+            <div className="flex gap-0 mb-6 opacity-0-start animate-fade-in-up delay-100 bg-[#ede8f8] p-1 rounded-2xl w-fit">
               <button
                 onClick={() => setTipsTab("to_youth")}
                 className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
                   tipsTab === "to_youth"
-                    ? "bg-white text-[#2d2318] shadow-sm"
-                    : "text-[#8a7060] hover:text-[#2d2318]"
+                    ? "bg-white text-[#1e1830] shadow-sm"
+                    : "text-[#7068a0] hover:text-[#1e1830]"
                 }`}
               >
                 🌿 Старшие → Молодёжи
@@ -813,8 +854,8 @@ export default function Index() {
                 onClick={() => setTipsTab("to_elder")}
                 className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
                   tipsTab === "to_elder"
-                    ? "bg-white text-[#2d2318] shadow-sm"
-                    : "text-[#8a7060] hover:text-[#2d2318]"
+                    ? "bg-white text-[#1e1830] shadow-sm"
+                    : "text-[#7068a0] hover:text-[#1e1830]"
                 }`}
               >
                 🤙 Молодёжь → Старшим
@@ -824,10 +865,10 @@ export default function Index() {
             {/* Context banner */}
             <div
               className="rounded-2xl px-5 py-3 mb-6 opacity-0-start animate-fade-in-up delay-200 flex items-start gap-3"
-              style={{ backgroundColor: tipsTab === "to_youth" ? "#d8ead8" : "#fde8d0" }}
+              style={{ backgroundColor: tipsTab === "to_youth" ? "#e8eef8" : "#fce8f4" }}
             >
               <span className="text-2xl mt-0.5">{tipsTab === "to_youth" ? "🧓" : "👦"}</span>
-              <p className="font-golos text-sm leading-relaxed" style={{ color: tipsTab === "to_youth" ? "#2a5c2a" : "#a04820" }}>
+              <p className="font-golos text-sm leading-relaxed" style={{ color: tipsTab === "to_youth" ? "#2060a0" : "#a03060" }}>
                 {tipsTab === "to_youth"
                   ? "Люди с большим жизненным опытом делятся тем, что хотели бы сказать молодому поколению"
                   : "Молодые люди делятся тем, что хотели бы донести до старшего поколения"}
@@ -841,29 +882,29 @@ export default function Index() {
                 return (
                   <div
                     key={key}
-                    className="bg-white rounded-3xl border border-[#f0e0d0] p-6 card-hover shadow-sm opacity-0-start animate-fade-in-up"
+                    className="bg-white rounded-3xl border border-[#ddd8f0] p-6 card-hover shadow-sm opacity-0-start animate-fade-in-up"
                     style={{ animationDelay: `${i * 80}ms` }}
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-3xl">{tip.avatar}</span>
                       <div>
-                        <p className="font-golos font-semibold text-[#2d2318] text-sm">{tip.author}</p>
+                        <p className="font-golos font-semibold text-[#1e1830] text-sm">{tip.author}</p>
                         <span className={`text-xs px-2 py-0.5 rounded-full font-golos font-medium ${tipsTab === "to_youth" ? "tag-elder" : "tag-youth"}`}>
                           {tipsTab === "to_youth" ? "старшее поколение" : "молодёжь"}
                         </span>
                       </div>
                     </div>
-                    <h3 className="font-cormorant text-xl font-semibold text-[#2d2318] mb-2">{tip.title}</h3>
-                    <p className="font-golos text-[#8a7060] text-sm leading-relaxed mb-4">{tip.text}</p>
+                    <h3 className="font-cormorant text-xl font-semibold text-[#1e1830] mb-2">{tip.title}</h3>
+                    <p className="font-golos text-[#7068a0] text-sm leading-relaxed mb-4">{tip.text}</p>
                     <button
                       onClick={() => setLikedTips((prev) => ({ ...prev, [key]: !prev[key] }))}
                       className="flex items-center gap-1.5 text-sm font-golos font-medium transition-all hover:scale-105"
-                      style={{ color: liked ? "#c8714a" : "#8a7060" }}
+                      style={{ color: liked ? "#8b72c8" : "#7068a0" }}
                     >
                       <Icon
                         name="Heart"
                         size={16}
-                        style={{ fill: liked ? "#c8714a" : "none", color: liked ? "#c8714a" : "#8a7060" }}
+                        style={{ fill: liked ? "#8b72c8" : "none", color: liked ? "#8b72c8" : "#7068a0" }}
                       />
                       {tip.likes + (liked ? 1 : 0)} Полезно
                     </button>
@@ -874,114 +915,46 @@ export default function Index() {
           </div>
         )}
 
-        {/* ════════════ EVENTS ════════════ */}
-        {tab === "events" && (
-          <div>
-            <div className="mb-8 opacity-0-start animate-fade-in-up">
-              <h2 className="font-cormorant text-4xl font-semibold text-[#2d2318] mb-2">События и встречи</h2>
-              <p className="font-golos text-[#8a7060]">Живое общение — лучший способ понять друг друга</p>
-            </div>
-            <div className="flex flex-col gap-5">
-              {EVENTS.map((ev, i) => (
-                <div
-                  key={i}
-                  className="opacity-0-start animate-fade-in-up bg-white rounded-3xl border border-[#f0e0d0] overflow-hidden card-hover shadow-sm"
-                  style={{ animationDelay: `${i * 100}ms` }}
-                >
-                  <div className="flex">
-                    <div
-                      className="flex flex-col items-center justify-center px-6 py-5 min-w-[90px]"
-                      style={{ backgroundColor: ev.color }}
-                    >
-                      <span className="text-3xl mb-1">{ev.icon}</span>
-                      <p className="font-cormorant text-2xl font-semibold text-[#2d2318] text-center leading-tight">
-                        {ev.date.split(" ")[0]}
-                      </p>
-                      <p className="font-golos text-xs text-[#8a7060] text-center">{ev.date.split(" ")[1]}</p>
-                      <p className="font-golos text-xs text-[#8a7060] text-center mt-0.5">{ev.day}</p>
-                    </div>
-                    <div className="flex-1 p-5">
-                      <h3 className="font-cormorant text-xl font-semibold text-[#2d2318] mb-1">{ev.title}</h3>
-                      <p className="font-golos text-sm text-[#8a7060] leading-relaxed mb-3">{ev.desc}</p>
-                      <div className="flex items-center gap-1.5 text-xs text-[#8a7060] font-golos">
-                        <Icon name="MapPin" size={13} />
-                        <span>{ev.place}</span>
-                      </div>
-                    </div>
-                    <div className="hidden md:flex items-center pr-5">
-                      <button
-                        className="font-golos font-semibold text-sm px-4 py-2 rounded-xl text-white transition-all hover:scale-105 hover:shadow-md"
-                        style={{ backgroundColor: "#c8714a" }}
-                      >
-                        Записаться
-                      </button>
-                    </div>
-                  </div>
-                  <div className="px-5 pb-4 md:hidden">
-                    <button
-                      className="w-full font-golos font-semibold text-sm px-4 py-2 rounded-xl text-white"
-                      style={{ backgroundColor: "#c8714a" }}
-                    >
-                      Записаться
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 bg-[#fdf3e8] border border-[#f0ddc8] rounded-3xl p-6 text-center opacity-0-start animate-fade-in-up delay-400">
-              <p className="text-3xl mb-2">🙌</p>
-              <h3 className="font-cormorant text-2xl font-semibold text-[#2d2318] mb-1">Хочешь организовать встречу?</h3>
-              <p className="font-golos text-sm text-[#8a7060] mb-4">Напиши нам — поможем со всем организационным</p>
-              <button
-                className="font-golos font-semibold text-sm px-6 py-2.5 rounded-xl text-white inline-block transition-all hover:scale-105 hover:shadow-md"
-                style={{ backgroundColor: "#c8714a" }}
-              >
-                Предложить событие
-              </button>
-            </div>
-          </div>
-        )}
-
         {/* ════════════ STORIES ════════════ */}
         {tab === "stories" && (
           <div>
             <div className="mb-8 opacity-0-start animate-fade-in-up">
-              <h2 className="font-cormorant text-4xl font-semibold text-[#2d2318] mb-2">Истории и воспоминания</h2>
-              <p className="font-golos text-[#8a7060]">Жизнь — лучший учитель, а истории — мосты между людьми</p>
+              <h2 className="font-cormorant text-4xl font-semibold text-[#1e1830] mb-2">Истории и воспоминания</h2>
+              <p className="font-golos text-[#7068a0]">Жизнь — лучший учитель, а истории — мосты между людьми</p>
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="grid md:grid-cols-2 gap-5">
               {STORIES.map((story, i) => (
                 <div
                   key={i}
-                  className="opacity-0-start animate-fade-in-up rounded-3xl border border-[#f0e0d0] overflow-hidden shadow-sm card-hover"
-                  style={{ backgroundColor: story.color, animationDelay: `${i * 150}ms` }}
+                  className="opacity-0-start animate-fade-in-up rounded-3xl border border-[#ddd8f0] overflow-hidden shadow-sm card-hover"
+                  style={{ backgroundColor: story.color, animationDelay: `${i * 100}ms` }}
                 >
-                  <div className="p-6 md:p-8">
-                    <div className="flex items-center gap-4 mb-5">
-                      <div className="w-14 h-14 rounded-full flex items-center justify-center text-3xl bg-white shadow-sm border border-[#f0e0d0]">
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-white shadow-sm border border-[#ddd8f0]">
                         {story.avatar}
                       </div>
                       <div>
-                        <p className="font-cormorant text-xl font-semibold text-[#2d2318]">{story.name}</p>
-                        <p className="font-golos text-sm text-[#8a7060]">
+                        <p className="font-cormorant text-lg font-semibold text-[#1e1830]">{story.name}</p>
+                        <p className="font-golos text-xs text-[#7068a0]">
                           {story.age} · {story.year}
                         </p>
                       </div>
                     </div>
-                    <blockquote className="font-cormorant text-xl italic text-[#2d2318] leading-relaxed border-l-4 border-[#c8714a] pl-5">
+                    <blockquote className="font-cormorant text-lg italic text-[#1e1830] leading-relaxed border-l-4 border-[#8b72c8] pl-4">
                       {story.text}
                     </blockquote>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="mt-8 bg-white border border-[#f0e0d0] rounded-3xl p-6 text-center shadow-sm opacity-0-start animate-fade-in-up delay-500">
+            <div className="mt-8 bg-white border border-[#ddd8f0] rounded-3xl p-6 text-center shadow-sm opacity-0-start animate-fade-in-up delay-500">
               <p className="text-3xl mb-2">📝</p>
-              <h3 className="font-cormorant text-2xl font-semibold text-[#2d2318] mb-1">Есть своя история?</h3>
-              <p className="font-golos text-sm text-[#8a7060] mb-4">Поделись — она может стать чьим-то мостиком к пониманию</p>
+              <h3 className="font-cormorant text-2xl font-semibold text-[#1e1830] mb-1">Есть своя история?</h3>
+              <p className="font-golos text-sm text-[#7068a0] mb-4">Поделись — она может стать чьим-то мостиком к пониманию</p>
               <button
                 className="font-golos font-semibold text-sm px-6 py-2.5 rounded-xl text-white inline-block transition-all hover:scale-105 hover:shadow-md"
-                style={{ backgroundColor: "#c8714a" }}
+                style={{ backgroundColor: "#8b72c8" }}
               >
                 Рассказать историю
               </button>
@@ -991,10 +964,10 @@ export default function Index() {
       </main>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-[#e8d8c0] py-6" style={{ backgroundColor: "var(--warm-sand)" }}>
+      <footer className="border-t border-[#ddd8f0] py-6" style={{ backgroundColor: "var(--bg-sand)" }}>
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="font-cormorant text-2xl text-[#2d2318] mb-1">🌉 Мост поколений</p>
-          <p className="font-golos text-xs text-[#8a7060]">Сближаем людей через слова, истории и живое общение</p>
+          <p className="font-cormorant text-2xl text-[#1e1830] mb-1">🌉 Мост поколений</p>
+          <p className="font-golos text-xs text-[#7068a0]">Сближаем людей через слова, истории и живое общение</p>
         </div>
       </footer>
     </div>
