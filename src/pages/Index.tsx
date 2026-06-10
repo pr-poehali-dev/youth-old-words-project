@@ -18,6 +18,21 @@ const WORDS = [
   { youth: "Рандом", elder: "Случайный / Незнакомец", emoji: "🎲", example: "Какой-то рандом написал в личку." },
 ];
 
+const ELDER_WORDS = [
+  { elder: "Авось", youth: "Может повезёт / На удачу", emoji: "🍀", example: "Авось пронесёт — поедем без зонтика." },
+  { elder: "Намедни", youth: "Недавно / На днях", emoji: "📅", example: "Намедни встретил старого друга на рынке." },
+  { elder: "Давеча", youth: "Вчера / Позавчера", emoji: "🕰️", example: "Давеча смотрел хороший фильм по телевизору." },
+  { elder: "Кумекать", youth: "Думать / Соображать", emoji: "🧠", example: "Надо покумекать, как это починить." },
+  { elder: "Шамать", youth: "Есть / Кушать", emoji: "🍲", example: "Садитесь шамать, всё уже на столе!" },
+  { elder: "Чинно", youth: "Степенно / Достойно", emoji: "🎩", example: "Все сидели чинно, ждали тоста." },
+  { elder: "Лихой", youth: "Крутой / Смелый", emoji: "🤠", example: "Лихой был парень — ничего не боялся." },
+  { elder: "Балаган", youth: "Бардак / Цирк", emoji: "🎪", example: "Что за балаган вы тут устроили!" },
+  { elder: "Ухажёр", youth: "Парень / Тот кто ухаживает", emoji: "💐", example: "К ней ухажёр приходил каждый вечер." },
+  { elder: "Кумушки", youth: "Подруги-сплетницы", emoji: "👯", example: "Кумушки на лавочке всё судачат да судачат." },
+  { elder: "Мотать на ус", youth: "Запоминать / Учиться", emoji: "📝", example: "Мотай на ус — потом пригодится." },
+  { elder: "Голубчик", youth: "Дружище / Милый", emoji: "🕊️", example: "Голубчик, ты опять забыл позвонить!" },
+];
+
 const TIPS = [
   {
     category: "youth",
@@ -168,7 +183,7 @@ const WordCard = ({ w, i }: { w: (typeof WORDS)[0]; i: number }) => {
   const [flipped, setFlipped] = useState(false);
   return (
     <div
-      className={`opacity-0-start animate-fade-in-up cursor-pointer`}
+      className="opacity-0-start animate-fade-in-up cursor-pointer"
       style={{ perspective: "800px", animationDelay: `${Math.min(i * 80, 500)}ms` }}
       onClick={() => setFlipped((v) => !v)}
     >
@@ -181,7 +196,6 @@ const WordCard = ({ w, i }: { w: (typeof WORDS)[0]; i: number }) => {
           height: "160px",
         }}
       >
-        {/* Front */}
         <div
           style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" as const }}
           className="absolute inset-0 bg-white rounded-2xl border border-[#f0e0d0] p-5 flex flex-col justify-between card-hover shadow-sm"
@@ -193,7 +207,6 @@ const WordCard = ({ w, i }: { w: (typeof WORDS)[0]; i: number }) => {
           </div>
           <p className="text-xs text-[#8a7060] font-golos">Нажми, чтобы перевести →</p>
         </div>
-        {/* Back */}
         <div
           style={{
             backfaceVisibility: "hidden",
@@ -213,6 +226,53 @@ const WordCard = ({ w, i }: { w: (typeof WORDS)[0]; i: number }) => {
   );
 };
 
+const ElderWordCard = ({ w, i }: { w: (typeof ELDER_WORDS)[0]; i: number }) => {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <div
+      className="opacity-0-start animate-fade-in-up cursor-pointer"
+      style={{ perspective: "800px", animationDelay: `${Math.min(i * 80, 500)}ms` }}
+      onClick={() => setFlipped((v) => !v)}
+    >
+      <div
+        style={{
+          transition: "transform 0.5s",
+          transformStyle: "preserve-3d",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+          position: "relative",
+          height: "160px",
+        }}
+      >
+        <div
+          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" as const }}
+          className="absolute inset-0 bg-[#f0f5f0] rounded-2xl border border-[#d0e0d0] p-5 flex flex-col justify-between card-hover shadow-sm"
+        >
+          <div>
+            <span className="text-3xl">{w.emoji}</span>
+            <p className="font-cormorant text-2xl font-semibold text-[#2d2318] mt-1">{w.elder}</p>
+            <span className="tag-elder text-xs px-2 py-0.5 rounded-full font-golos font-medium">из прошлого</span>
+          </div>
+          <p className="text-xs text-[#8a7060] font-golos">Нажми, чтобы перевести →</p>
+        </div>
+        <div
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden" as const,
+            transform: "rotateY(180deg)",
+          }}
+          className="absolute inset-0 bg-[#fde8d0] rounded-2xl border border-[#f0d8b8] p-5 flex flex-col justify-between shadow-sm"
+        >
+          <div>
+            <span className="tag-youth text-xs px-2 py-0.5 rounded-full font-golos font-medium">по-молодёжному</span>
+            <p className="font-cormorant text-xl font-semibold text-[#2d2318] mt-2">{w.youth}</p>
+          </div>
+          <p className="text-sm text-[#8a7060] font-golos italic">«{w.example}»</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 
 type Tab = "home" | "dictionary" | "tips" | "events" | "stories";
@@ -222,12 +282,19 @@ export default function Index() {
   const [search, setSearch] = useState("");
   const [likedTips, setLikedTips] = useState<number[]>([]);
   const [tipsFilter, setTipsFilter] = useState<"all" | "youth" | "elder">("all");
+  const [dictTab, setDictTab] = useState<"youth" | "elder">("youth");
   const heroRef = useRef<HTMLDivElement>(null);
 
   const filteredWords = WORDS.filter(
     (w) =>
       w.youth.toLowerCase().includes(search.toLowerCase()) ||
       w.elder.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const filteredElderWords = ELDER_WORDS.filter(
+    (w) =>
+      w.elder.toLowerCase().includes(search.toLowerCase()) ||
+      w.youth.toLowerCase().includes(search.toLowerCase())
   );
 
   const filteredTips =
@@ -427,11 +494,51 @@ export default function Index() {
         {/* ════════════ DICTIONARY ════════════ */}
         {tab === "dictionary" && (
           <div>
-            <div className="mb-8 opacity-0-start animate-fade-in-up">
+            <div className="mb-6 opacity-0-start animate-fade-in-up">
               <h2 className="font-cormorant text-4xl font-semibold text-[#2d2318] mb-2">Словарь поколений</h2>
               <p className="font-golos text-[#8a7060]">Нажми на карточку, чтобы перевернуть и узнать перевод</p>
             </div>
-            <div className="relative mb-6 opacity-0-start animate-fade-in-up delay-100">
+
+            {/* Dict tabs */}
+            <div className="flex gap-2 mb-5 opacity-0-start animate-fade-in-up delay-100">
+              <button
+                onClick={() => { setDictTab("youth"); setSearch(""); }}
+                className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
+                  dictTab === "youth"
+                    ? "text-white shadow-sm"
+                    : "bg-white border border-[#e8d8c0] text-[#8a7060] hover:border-[#c8714a]"
+                }`}
+                style={dictTab === "youth" ? { backgroundColor: "#c8714a" } : {}}
+              >
+                <span>🤙</span> Словарь молодёжи
+              </button>
+              <button
+                onClick={() => { setDictTab("elder"); setSearch(""); }}
+                className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
+                  dictTab === "elder"
+                    ? "text-white shadow-sm"
+                    : "bg-white border border-[#e8d8c0] text-[#8a7060] hover:border-[#8aab96]"
+                }`}
+                style={dictTab === "elder" ? { backgroundColor: "#8aab96" } : {}}
+              >
+                <span>🌿</span> Словарь старших
+              </button>
+            </div>
+
+            {/* Description strip */}
+            <div
+              className="rounded-2xl px-5 py-3 mb-5 opacity-0-start animate-fade-in-up delay-200 flex items-center gap-3"
+              style={{ backgroundColor: dictTab === "youth" ? "#fde8d0" : "#d8ead8" }}
+            >
+              <span className="text-xl">{dictTab === "youth" ? "🤙" : "🌿"}</span>
+              <p className="font-golos text-sm" style={{ color: dictTab === "youth" ? "#a04820" : "#2a5c2a" }}>
+                {dictTab === "youth"
+                  ? "Слова, которые используют молодые люди — с переводом для старшего поколения"
+                  : "Старинные и народные слова — с объяснением для молодёжи"}
+              </p>
+            </div>
+
+            <div className="relative mb-6 opacity-0-start animate-fade-in-up delay-200">
               <Icon name="Search" size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8a7060]" />
               <input
                 value={search}
@@ -440,16 +547,37 @@ export default function Index() {
                 className="w-full pl-11 pr-4 py-3 rounded-2xl border border-[#e8d8c0] bg-white font-golos text-[#2d2318] focus:outline-none focus:border-[#c8714a] transition-colors"
               />
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {filteredWords.map((w, i) => (
-                <WordCard key={w.youth} w={w} i={i} />
-              ))}
-            </div>
-            {filteredWords.length === 0 && (
-              <div className="text-center py-16 text-[#8a7060] font-golos">
-                <p className="text-4xl mb-3">🔍</p>
-                <p>Слово не найдено — может, ты его знаешь первым?</p>
-              </div>
+
+            {dictTab === "youth" && (
+              <>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {filteredWords.map((w, i) => (
+                    <WordCard key={w.youth} w={w} i={i} />
+                  ))}
+                </div>
+                {filteredWords.length === 0 && (
+                  <div className="text-center py-16 text-[#8a7060] font-golos">
+                    <p className="text-4xl mb-3">🔍</p>
+                    <p>Слово не найдено</p>
+                  </div>
+                )}
+              </>
+            )}
+
+            {dictTab === "elder" && (
+              <>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {filteredElderWords.map((w, i) => (
+                    <ElderWordCard key={w.elder} w={w} i={i} />
+                  ))}
+                </div>
+                {filteredElderWords.length === 0 && (
+                  <div className="text-center py-16 text-[#8a7060] font-golos">
+                    <p className="text-4xl mb-3">🔍</p>
+                    <p>Слово не найдено</p>
+                  </div>
+                )}
+              </>
             )}
           </div>
         )}
