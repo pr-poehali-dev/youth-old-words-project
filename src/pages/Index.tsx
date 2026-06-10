@@ -184,38 +184,95 @@ const ELDER_WORDS = [
   { elder: "Мотать на ус", youth: "Запоминать / Учиться на опыте", emoji: "📝", example: "Мотай на ус — потом пригодится." },
 ];
 
-const TIPS = [
+// Советы старших — молодёжи
+const TIPS_TO_YOUTH = [
   {
-    category: "youth",
-    title: "Как объяснить бабушке, что такое мессенджер",
-    text: "Покажи на живом примере — отправьте друг другу голосовое сообщение. Практика лучше теории!",
+    title: "Не торопитесь с выбором пути",
+    text: "В 20 лет кажется, что надо всё решить прямо сейчас. Но жизнь длинная — ошибки поправимы, а опыт бесценен. Дайте себе время.",
+    author: "Михаил Андреевич, 71 год",
+    avatar: "👴",
+    likes: 112,
+  },
+  {
+    title: "Звоните родителям",
+    text: "Не только когда нужны деньги или совет. Просто так. «Как дела?» — это самое важное, что вы можете сказать.",
+    author: "Людмила Сергеевна, 65 лет",
+    avatar: "👵",
+    likes: 189,
+  },
+  {
+    title: "Умейте слушать тишину",
+    text: "Вы выросли с наушниками в ушах. Попробуйте иногда сидеть просто так, без музыки и телефона. Голова скажет спасибо.",
+    author: "Иван Николаевич, 68 лет",
+    avatar: "🧓",
+    likes: 74,
+  },
+  {
+    title: "Деньги — инструмент, не цель",
+    text: "Мы жили скромно, но счастливо. Самое ценное в жизни — это люди рядом, а не вещи вокруг.",
+    author: "Нина Петровна, 72 года",
+    avatar: "👩‍🍳",
+    likes: 95,
+  },
+  {
+    title: "Учитесь готовить хотя бы три блюда",
+    text: "Уметь накормить себя и близких — это не устаревший навык, это забота о себе. Борщ, каша и яичница — и вы уже не пропадёте.",
+    author: "Тамара Васильевна, 70 лет",
+    avatar: "👵",
+    likes: 83,
+  },
+  {
+    title: "Не сжигайте мосты",
+    text: "Жизнь — штука круглая. Тот, с кем вы поссорились сегодня, завтра может оказаться рядом. Уходите красиво.",
+    author: "Аркадий Фёдорович, 74 лет",
+    avatar: "👴",
+    likes: 67,
+  },
+];
+
+// Советы молодёжи — старшим
+const TIPS_TO_ELDER = [
+  {
+    title: "Не бойтесь интернета — он не кусается",
+    text: "Начните с одного приложения — например, карты или погода. Потом сами не заметите, как освоитесь. Мы рядом, поможем!",
     author: "Маша, 19 лет",
     avatar: "👩‍💻",
     likes: 48,
   },
   {
-    category: "elder",
-    title: "Как разговорить молодёжь за ужином",
-    text: "Спроси, что они смотрят, и попроси показать. Искренний интерес творит чудеса.",
-    author: "Татьяна Ивановна, 68 лет",
-    avatar: "👵",
-    likes: 63,
-  },
-  {
-    category: "youth",
-    title: "Настройка шрифта побольше на смартфоне",
-    text: "Настройки → Экран → Размер текста. Сдвинь ползунок вправо — и глаза не будут уставать.",
+    title: "Спрашивайте нас — мы не смеёмся",
+    text: "Когда вы спрашиваете про телефон или соцсети, нам приятно помочь. Это не стыдно — мы тоже многого не знаем из вашего опыта.",
     author: "Дима, 22 года",
     avatar: "👨‍🎓",
     likes: 91,
   },
   {
-    category: "elder",
-    title: "Рецепт блинов, которые любят все поколения",
-    text: "Секрет моей мамы: добавь щепотку соды в тесто и дай постоять 10 минут — блины выйдут воздушные.",
-    author: "Нина Петровна, 72 года",
-    avatar: "👩‍🍳",
+    title: "Ваш жизненный опыт — это суперсила",
+    text: "Вы прошли через столько всего, о чём мы только читали в книгах. Рассказывайте нам — мы реально хотим слушать.",
+    author: "Аня, 17 лет",
+    avatar: "👧",
+    likes: 134,
+  },
+  {
+    title: "Как настроить шрифт побольше на смартфоне",
+    text: "Настройки → Экран → Размер текста. Сдвиньте ползунок вправо — и читать станет намного удобнее. Попробуйте!",
+    author: "Артём, 24 года",
+    avatar: "👨‍💻",
     likes: 77,
+  },
+  {
+    title: "Мы тоже боимся будущего",
+    text: "Кажется, что молодым всё просто. Но нас тоже пугает неизвестность. Ваши слова «всё будет хорошо» — не пустые слова, они правда помогают.",
+    author: "Света, 20 лет",
+    avatar: "👩‍🎓",
+    likes: 156,
+  },
+  {
+    title: "Голосовые сообщения — это удобно",
+    text: "Не нужно набирать длинный текст — просто нажмите и говорите. Для пальцев и глаз намного легче. Покажем как!",
+    author: "Коля, 18 лет",
+    avatar: "🧑",
+    likes: 62,
   },
 ];
 
@@ -431,8 +488,8 @@ type Tab = "home" | "dictionary" | "tips" | "events" | "stories";
 export default function Index() {
   const [tab, setTab] = useState<Tab>("home");
   const [search, setSearch] = useState("");
-  const [likedTips, setLikedTips] = useState<number[]>([]);
-  const [tipsFilter, setTipsFilter] = useState<"all" | "youth" | "elder">("all");
+  const [likedTips, setLikedTips] = useState<Record<string, boolean>>({});
+  const [tipsTab, setTipsTab] = useState<"to_youth" | "to_elder">("to_youth");
   const [dictTab, setDictTab] = useState<"youth" | "elder">("youth");
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -448,8 +505,7 @@ export default function Index() {
       w.youth.toLowerCase().includes(search.toLowerCase())
   );
 
-  const filteredTips =
-    tipsFilter === "all" ? TIPS : TIPS.filter((t) => t.category === tipsFilter);
+  const currentTips = tipsTab === "to_youth" ? TIPS_TO_YOUTH : TIPS_TO_ELDER;
 
   const navItems: { key: Tab; label: string; icon: string }[] = [
     { key: "home", label: "Главная", icon: "Home" },
@@ -738,77 +794,82 @@ export default function Index() {
           <div>
             <div className="mb-6 opacity-0-start animate-fade-in-up">
               <h2 className="font-cormorant text-4xl font-semibold text-[#2d2318] mb-2">Советы и опыт</h2>
-              <p className="font-golos text-[#8a7060]">Делимся знаниями — каждый ценен по-своему</p>
+              <p className="font-golos text-[#8a7060]">Два поколения — два взгляда на жизнь</p>
             </div>
-            <div className="flex gap-2 mb-6 opacity-0-start animate-fade-in-up delay-100 flex-wrap">
-              {(
-                [
-                  { key: "all", label: "Все советы" },
-                  { key: "youth", label: "💻 От молодёжи" },
-                  { key: "elder", label: "🌿 От старших" },
-                ] as const
-              ).map((f) => (
-                <button
-                  key={f.key}
-                  onClick={() => setTipsFilter(f.key)}
-                  className={`font-golos text-sm font-medium px-4 py-2 rounded-xl transition-all ${
-                    tipsFilter === f.key
-                      ? "text-white shadow-sm"
-                      : "bg-white border border-[#e8d8c0] text-[#8a7060] hover:border-[#c8714a]"
-                  }`}
-                  style={
-                    tipsFilter === f.key ? { backgroundColor: "#c8714a" } : {}
-                  }
-                >
-                  {f.label}
-                </button>
-              ))}
+
+            {/* Tab switcher */}
+            <div className="flex gap-0 mb-6 opacity-0-start animate-fade-in-up delay-100 bg-[#f5ede0] p-1 rounded-2xl w-fit">
+              <button
+                onClick={() => setTipsTab("to_youth")}
+                className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
+                  tipsTab === "to_youth"
+                    ? "bg-white text-[#2d2318] shadow-sm"
+                    : "text-[#8a7060] hover:text-[#2d2318]"
+                }`}
+              >
+                🌿 Старшие → Молодёжи
+              </button>
+              <button
+                onClick={() => setTipsTab("to_elder")}
+                className={`font-golos font-semibold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 ${
+                  tipsTab === "to_elder"
+                    ? "bg-white text-[#2d2318] shadow-sm"
+                    : "text-[#8a7060] hover:text-[#2d2318]"
+                }`}
+              >
+                🤙 Молодёжь → Старшим
+              </button>
             </div>
+
+            {/* Context banner */}
+            <div
+              className="rounded-2xl px-5 py-3 mb-6 opacity-0-start animate-fade-in-up delay-200 flex items-start gap-3"
+              style={{ backgroundColor: tipsTab === "to_youth" ? "#d8ead8" : "#fde8d0" }}
+            >
+              <span className="text-2xl mt-0.5">{tipsTab === "to_youth" ? "🧓" : "👦"}</span>
+              <p className="font-golos text-sm leading-relaxed" style={{ color: tipsTab === "to_youth" ? "#2a5c2a" : "#a04820" }}>
+                {tipsTab === "to_youth"
+                  ? "Люди с большим жизненным опытом делятся тем, что хотели бы сказать молодому поколению"
+                  : "Молодые люди делятся тем, что хотели бы донести до старшего поколения"}
+              </p>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-5">
-              {filteredTips.map((tip, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-3xl border border-[#f0e0d0] p-6 card-hover shadow-sm opacity-0-start animate-fade-in-up"
-                  style={{ animationDelay: `${i * 100}ms` }}
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">{tip.avatar}</span>
-                    <div>
-                      <p className="font-golos font-semibold text-[#2d2318] text-sm">{tip.author}</p>
-                      <span
-                        className={`text-xs px-2 py-0.5 rounded-full font-golos font-medium ${
-                          tip.category === "youth" ? "tag-youth" : "tag-elder"
-                        }`}
-                      >
-                        {tip.category === "youth" ? "молодёжь" : "старшее поколение"}
-                      </span>
-                    </div>
-                  </div>
-                  <h3 className="font-cormorant text-xl font-semibold text-[#2d2318] mb-2">{tip.title}</h3>
-                  <p className="font-golos text-[#8a7060] text-sm leading-relaxed mb-4">{tip.text}</p>
-                  <button
-                    onClick={() =>
-                      setLikedTips((prev) =>
-                        prev.includes(i) ? prev.filter((x) => x !== i) : [...prev, i]
-                      )
-                    }
-                    className="flex items-center gap-1.5 text-sm font-golos font-medium transition-all hover:scale-105"
-                    style={{
-                      color: likedTips.includes(i) ? "#c8714a" : "#8a7060",
-                    }}
+              {currentTips.map((tip, i) => {
+                const key = `${tipsTab}-${i}`;
+                const liked = !!likedTips[key];
+                return (
+                  <div
+                    key={key}
+                    className="bg-white rounded-3xl border border-[#f0e0d0] p-6 card-hover shadow-sm opacity-0-start animate-fade-in-up"
+                    style={{ animationDelay: `${i * 80}ms` }}
                   >
-                    <Icon
-                      name="Heart"
-                      size={16}
-                      style={{
-                        fill: likedTips.includes(i) ? "#c8714a" : "none",
-                        color: likedTips.includes(i) ? "#c8714a" : "#8a7060",
-                      }}
-                    />
-                    {tip.likes + (likedTips.includes(i) ? 1 : 0)} Полезно
-                  </button>
-                </div>
-              ))}
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-3xl">{tip.avatar}</span>
+                      <div>
+                        <p className="font-golos font-semibold text-[#2d2318] text-sm">{tip.author}</p>
+                        <span className={`text-xs px-2 py-0.5 rounded-full font-golos font-medium ${tipsTab === "to_youth" ? "tag-elder" : "tag-youth"}`}>
+                          {tipsTab === "to_youth" ? "старшее поколение" : "молодёжь"}
+                        </span>
+                      </div>
+                    </div>
+                    <h3 className="font-cormorant text-xl font-semibold text-[#2d2318] mb-2">{tip.title}</h3>
+                    <p className="font-golos text-[#8a7060] text-sm leading-relaxed mb-4">{tip.text}</p>
+                    <button
+                      onClick={() => setLikedTips((prev) => ({ ...prev, [key]: !prev[key] }))}
+                      className="flex items-center gap-1.5 text-sm font-golos font-medium transition-all hover:scale-105"
+                      style={{ color: liked ? "#c8714a" : "#8a7060" }}
+                    >
+                      <Icon
+                        name="Heart"
+                        size={16}
+                        style={{ fill: liked ? "#c8714a" : "none", color: liked ? "#c8714a" : "#8a7060" }}
+                      />
+                      {tip.likes + (liked ? 1 : 0)} Полезно
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
